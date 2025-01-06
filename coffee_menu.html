@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+            margin: 0;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .cent {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .menuContainer {
+            background-color: burlywood;
+            padding: 20px;
+            border: 5px solid rgba(165, 42, 42, 0.8);
+            border-radius: 10px;
+            min-height: 645px;
+            width: 70%;
+            max-width: 440px;
+            aspect-ratio: 440/620;
+            /*height: 80vh;*/
+        }
+
+        .menuHeader {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 0px;
+            font-family: Impact;
+            text-align: center;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .menuDate {
+            font-size: 16px;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid brown;
+        }
+
+        .coffee {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 10px;
+            font-family: Impact;
+            text-align: center;
+            
+        }
+
+        .flavor {
+            font-size: 16px;
+            padding-top: 10px;
+
+        }
+
+        .goodItem {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 16px;
+            padding-top: 10px;
+        }
+
+        a:hover {
+            color: brown;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        .icons {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;;
+        }
+
+    </style>
+</head>
+<body class="flex cent">
+    <!-- 菜单 -->
+    <div class="flex menuContainer column">
+        <!-- 标题 -->
+        <div class="menuHeader">CAMPER CAFE</div>
+        <!-- 创立时间 -->
+        <div class="menuDate">Est. 2020</div>
+        <!-- 菜单内容 -->
+        <div class="flex flex1 column" style="border-bottom: 4px solid brown; padding-bottom: 25px;">
+            <!-- 咖啡标题 -->
+            <div class="coffee">Coffee</div>
+            <!-- 咖啡图标 -->
+            <div class="icons">
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon" />
+            </div>
+            <!-- 咖啡列表 -->
+            <div class="coffeeList">
+                <div class="goodItem">
+                    <div class="flavor">French Vanilla</div>
+                    <div class="price">$3.00</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Caramel Macchiato</div>
+                    <div class="price">$3.75</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Pumpkin Spice</div>
+                    <div class="price">$3.50</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Hazelnut</div>
+                    <div class="price">$4.00</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Mocha</div>
+                    <div class="price">$4.50</div>
+                </div>
+            </div>
+            <!-- 甜品标题 -->
+            <div class="coffee">Dessert</div>
+            <!-- 甜品图标 -->
+            <div class="icons">
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+            </div>
+            <!-- 甜品列表 -->
+            <div class="dessertList">
+                <div class="goodItem">
+                    <div class="flavor">Donut</div>
+                    <div class="price">$1.50</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Cherry Pie</div>
+                    <div class="price">$2.75</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Cheesecake</div>
+                    <div class="price">$3.00</div>
+                </div>
+                <div class="goodItem">
+                    <div class="flavor">Cinnamon Roll</div>
+                    <div class="price">$2.50</div>
+                </div>
+            </div>
+        </div>
+        <!-- 网站 -->
+        <div class="flex1 flex column">
+            <div class="website" style="text-align: center; margin-top: 12px;">
+                visit our website: <a href="https://www.campercafe.com">CAMPER CAFE</a>
+            </div>
+            <div class="author flex1" style="text-align: center; margin: 12px;">
+                Created by <a href="https://asder0.github.io/re01-one/">Asder</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
