@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1b1b32;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            color: #fff;
+            font-family: Tahoma;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+        
+        .cent {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .instruction {
+            color: #fff;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .formContainer {
+            background-color: #1b1b36;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 0px;
+            border: 0.5rem solid black;
+            border-radius: 10px;
+            min-height: 900px;
+            width: 80%;
+            max-width: 500px;
+            aspect-ratio: 500/900;
+            border-style: solid;
+            overflow: auto;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+        }
+        
+        label {
+            margin-bottom: 10px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .sec {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            align-items: left;
+        }
+
+        .inFormation {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        input[type="file"], input[type="number"] {
+            padding: 1px 2px;
+            border: none;
+            width: 100%;
+            border: 0px;
+            padding: 0px;
+            height: 2em;
+        }
+
+        input[type="number"] {
+            padding: 1px 2px;
+            height: 1.5em
+        } 
+
+        select {
+            padding: 1px 2px;
+            height: 1.5rem;
+        }
+
+        input[type="radio"] {
+            margin: 0;
+        }
+
+        a, a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: #dfdfe2;
+        }
+
+        .subMit {
+            width: 60%;
+            height: 2em;
+            margin: 1em auto;
+            background-color: #3b3b4f;
+            border: 1px solid white;
+            color: white;
+            min-width: 300px;
+            font-size: 1.1rem
+        }
+
+    </style>
+</head>
+<body class="flex column cent", style="padding: 30px;">
+    <!-- 表单容器 -->
+    <div class="flex column formContainer">
+        <!-- 表格标题 -->
+        <div class="header">
+            Registration Form
+        </div>
+        <!-- 表格提示 -->
+        <div class="instruction">
+            Please fill out this form with the required information
+        </div>
+        <!-- 表格内容 -->
+        <div class="form" style="border-bottom: 4px solid #3b3b4f; padding-bottom: 20px;">
+            <!-- 姓输入框 -->
+            <div class="form-group">
+                <label for="name">Enter Your First Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <!-- 名输入框 -->
+            <div class="form-group">
+                <label for="surname">Enter Your Last Name:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <!-- 邮箱输入框 -->
+            <div class="form-group">
+                <label for="email">Enter Your Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- 密码输入框 -->
+            <div class="form-group">
+                <label for="password">Enter Your Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+        </div>
+        <!-- 选项标题 -->
+        <legend style="margin-top: 5px;">Account type (required):</legend>
+        <!-- 选项 -->
+        <div class="sec" style="border-bottom: 4px solid #3b3b4f; padding-bottom: 10px;">
+            <!-- 个人选项 -->
+            <label for="male">
+                <input type="radio" id="personal" name="account_type" value="personal" required>
+                Personal
+            </label>
+            <!-- 商务选项 -->
+            <label for="female">
+                <input type="radio" id="business" name="account_type" value="business" required>
+                Business
+            </label>
+        </div>
+        <!-- 其他个人信息 -->
+        <div class="inFormation">
+            <!-- 简历图片上传 -->
+            <legend style="margin-top: 0px;">Upload your profile picture:</legend>
+            <label for="profile_pic" style="margin-top: 10px;">
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/*" required style="background: #0a0a23">
+            </label>
+            <!-- 年龄 -->
+            <legend style="margin-top: 0px;">Input your age (years):</legend>
+            <label for="age" style="margin-top: 10px;">
+                <input type="number" id="age" name="age" min="18" max="120" accept="number" required style="background: #0a0a23;  color: white">
+            </label>
+            <!-- 信息来源 -->
+            <legend style="margin-bottom: 10px;">How did you hear about us?</legend>
+            <select id="referrer" name="referrer">
+                <option value="">(select one)</option>
+                <option value="1">Channel 1</option>
+                <option value="2">Channel 2</option>
+                <option value="3">Channel 3</option>
+                <option value="4">Others</option>
+              </select>
+            <!-- bio信息 -->
+            <legend style="margin-top: 10px; margin-bottom: 10px;">Provide a bio:</legend>
+            <textarea id="bio" name="bio" rows="3" cols="50" required placeholder="Enter a brief description of yourself" style="background: #0a0a23;  color: white"></textarea>
+            <!-- checkbox -->
+            <label for="terms" style="margin-top: 10px;">
+                <input type="checkbox" id="terms" name="terms" required style="margin: 0;">
+                I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+            </label>
+        </div>
+        <input type="submit" value="Submit" class="subMit" provided/>
+    </div>
+    
+    
+</body>
+</html>
