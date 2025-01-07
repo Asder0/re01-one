@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #fff;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .cen {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .factContainer {
+            margin: 30px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #ffe;
+            width: 275.15px;
+            padding: 10px;
+            padding-top: 0px;
+            min-height: 500px;
+            aspect-ratio: 260/536;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid black;
+            letter-spacing: 0.15rem;
+        }
+
+        .sort {
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .count {
+            margin-top: 2px;
+            font-weight: bold;
+            padding-bottom: 3px;
+            border-bottom: 10px solid black;
+            justify-content: space-between;
+        }
+
+        .perAmount {
+            margin-top: 2px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .calories {
+            display: flex;
+            font-size: 30px;
+            font-weight: bold;
+            justify-content: space-between;
+            margin-top: -2px;
+            border-bottom: 5px solid black;
+        }
+
+        .dailyValue {
+            font-size: 13px;
+            padding-top: 2px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .Slash {
+            border-bottom: 1px solid black;
+            margin-top: 4px;
+        }
+
+        .fatAlign {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 2px;
+            font-size: 13px;
+        }
+
+        .subFat {
+            padding-left: 1rem;
+        }
+
+        .plus {
+            margin-top: 5px;
+            font-size: 0.6rem;
+        }
+
+    </style>
+</head>
+<body class="cen flex">
+    <div class="flex factContainer column">
+        <!-- Nutrition Facts -->
+        <h1>Nutrition Facts</h1>
+        <!-- Serving Sorts -->
+        <div class="sort">
+            8 servings per container
+        </div>
+        <!-- Serving Size -->
+        <div class="count flex">
+            <div>Serving size</div>
+            <div>2/3 cup (55g)</div>
+        </div>
+        <!-- per amount -->
+        <div class="perAmount">
+            Amount per serving
+        </div>
+        <!-- Calories -->
+        <div class="calories">
+            <div>Calories</div>
+            <div>230</div>
+        </div>
+        <!-- dailyValue -->
+        <div class="dailyValue">
+            % Daily Value *
+        </div>
+        <!-- Slash -->
+        <div class="Slash"></div>
+        <!-- Fat -->
+        <div class="column flex">
+            <div class="fatAlign Slash">
+                <div><b>Total Fat</b> 8g</div>
+                <div><b>10%</b></div>
+            </div>
+
+            <div class="fatAlign subFat Slash">
+                <div>Saturated Fat 1g</div>
+                <div><b>5%</b></div>
+            </div>
+
+            <div class="fatAlign subFat Slash">
+                <div><i>Trans</i> Fat 0g</div>
+            </div>
+        </div>
+        <!-- Cholesterol -->
+        <div class="fatAlign Slash">
+            <div><b>Cholesterol</b> 0mg</div>
+            <div><b>0%</b></div>
+        </div>
+        <!-- Sodium -->
+        <div class="fatAlign Slash">
+            <div><b>Sodium</b> 160mg</div>
+            <div><b>7%</b></div>
+        </div>
+        <!-- Carbohydrates -->
+        <div class="column flex">
+            <div class="fatAlign Slash">
+                <div><b>Total Carbohydrates</b> 37g</div>
+                <div><b>13%</b></div>
+            </div>
+
+            <div class="fatAlign subFat Slash">
+                <div>Dietary Fiber 4g</div>
+            </div>
+
+            <div class="fatAlign subFat Slash">
+                <div>Total Sugars 12g</div>
+            </div>
+            
+            <div class="fatAlign subFat Slash">
+                <div style="padding-left: 1rem;">Includes 10g Added Sugars</div>
+                <div><b>20%</b></div>
+            </div>
+        </div>
+        <!-- Protein -->
+        <div class="fatAlign" style="border-bottom: 10px solid black; margin-top: 2px;">
+            <div><b>Protein</b> 3g</div>
+        </div>
+        <!-- Vitamins -->
+        <div class="fatAlign Slash">
+            <div>Vitamin D 2mcg</div>
+            <div>10%</div>
+        </div>
+        <!-- Calcium -->
+        <div class="fatAlign Slash">
+            <div>Calcium 260mg</div>
+            <div>20%</div>
+        </div>
+        <!-- Iron -->
+        <div class="fatAlign Slash">
+            <div>Iron 8mg</div>
+            <div>45%</div>
+        </div>
+        <!-- Potassium -->
+        <div class="fatAlign" style="border-bottom: 5px solid black; margin-top: 2px;">
+            <div>Potassium 235mg</div>
+            <div>6%</div>
+        </div>
+        <!-- Plus -->
+        <div class="plus">
+            * The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+        </div>
+        
+    </div>
+</body>
+</html>
