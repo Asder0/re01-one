@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: white;
+            font-family: Verdana, Tahoma;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .cen {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .column {
+            flex-direction: column;
+        }
+
+        header {
+            height: 50px;
+            width: 100%;
+            background: #1b1b32;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+        }
+        
+        #logo {
+            background-color: #0a0a23;
+            aspect-ratio: 35/4;
+            padding: 0.4rem;
+            width: 25%;
+            min-width: 150px;
+            max-width: 300px;
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 1.2rem;
+            text-align: center;
+            width: 25%;
+            max-width: 300px;
+        }
+
+        .nav {
+            width: 50%;
+            max-width: 300px;
+            height: 50px;
+            justify-content: space-evenly;
+        }
+
+        .nav > div {
+            padding: 0.5rem;
+        }
+        
+        .nav > div > a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav > div > a:hover {
+            background: white;
+            color: black;
+        }
+
+        .content {
+            width: 60%;
+            padding-top: 110px;
+            max-width: 500px;
+        }
+
+        .student {
+
+        }
+
+        .Html {
+
+        }
+
+        .Css {
+
+        }
+
+        .student > h2, .Html > h2, .Css > h2 {
+            border-bottom: 4px solid #dfdfe2;
+            margin-top: 0px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 180px;
+        }
+
+        input[type=radio] {
+            margin: 0;
+        }
+
+        .question {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        .Html > .question > h3 {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .sec {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 5px;
+        }
+        
+        .sel {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        .footer {
+            background: #2a2a40;
+            width: 100%;
+        }
+
+        .footer > p > a {
+            color: white;
+        }
+
+        .footer > p > a:hover {
+            color: #dedede
+        }
+
+        .footer > p {
+            margin-top: 1px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body class="flex column" style="align-items: center;">
+    <!-- header --> 
+    <header>
+        <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+        <h1>HTML/CSS Quiz</h1>
+        <div class="nav flex cen" >
+            <div><a href="">INFO</a></div>
+            <div><a href="">HTML</a></div>
+            <div><a href="">CSS</a></div>
+        </div>
+    </header>
+    <!-- content -->
+    <div class="flex column content">
+        <!-- student info -->
+        <div class="student" style="margin-bottom: 50px;">
+            <h2>Student INFO</h2>
+            <div class="info">
+                <div style="justify-content: space-between; display: flex; padding-bottom: 10px;">
+                    <div><label for="name">Name:</label></div>
+                    <div><input type="text" id="name" name="name" required></div>
+                </div>
+                <div style="justify-content: space-between; display: flex; padding-bottom: 10px;">
+                    <div><label for="email">Email:</label></div>
+                    <div><input type="email" id="email" name="email" required></div>
+                </div>
+                <div style="justify-content: space-between; display: flex; padding-bottom: 10px;">
+                    <div><label for="birth">Date of Birth:</label></div>
+                    <div><input type="date" id="birth" name="birth" required></div>
+                </div>
+            </div>
+        </div>
+        <!-- HTML -->
+        <div class="Html">
+            <h2 style="margin-bottom: 0px;">HTML</h2>
+            <div class="question">
+                <div style="padding-bottom: 15px;">
+                    <h3>Question #1</h3>
+                    <legend style="font-size: 0.9rem; padding-bottom: 15px;">The legend element represents a caption for the content of its parent fieldset element</legend>
+                    <div class="sec">
+                        <label for="q1">
+                            <input type="radio" id="True" name="q1" value="True" required>
+                            True
+                        </label>
+                        <label for="q1">
+                            <input type="radio" id="False" name="q1" value="False" required>
+                            False
+                        </label>
+                    </div>
+                </div>
+
+                <div style="padding-bottom: 15px;">
+                    <h3>Question #2</h3>
+                    <legend style="font-size: 0.9rem; padding-bottom: 15px;">A label element nesting an input element is required to have a for attribute with the same value as the input's id</legend>
+                    <div class="sec">
+                        <label for="q2">
+                            <input type="radio" id="True" name="q2" value="True" required>
+                            True
+                        </label>
+                        <label for="q2">
+                            <input type="radio" id="False" name="q2" value="False" required>
+                            False
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CSS -->
+        <div class="Css">
+            <h2 >CSS</h2>
+            <div class="sel">
+                <div style="padding-bottom: 20px;">
+                    <legend style="font-size: 0.9rem; padding-bottom: 5px;">Can the CSS margin property accept negative values?</legend>
+                    <select id="q3" name="q3" required>
+                        <option value="">Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <legend style="font-size: 0.9rem; padding-bottom: 5px;">Do you have any questions:</legend>
+                    <textarea id="q4" name="q4" rows="5" columns="30" style="width: 100%;" placeholder="Enter your question here"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" style="margin-top: 20px; display: block; margin: 40px auto; width: 60%; padding: 15px; background: #d0d0d5; border: 3px solid #3b3b4f; font-size: 1.5rem">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- footer -->
+    <div class="flex1 flex column footer" style="justify-content: center; text-align: center;">
+        <p><a href=""><i>freeCodeCamp</i></a></p>
+        <p><i>San Francisco</i></p>
+        <p><i>California</i></p>
+        <p style="margin-bottom: 1px;"><i>USA</i></p>
+    </div>
+    
+</body>
+</html>
