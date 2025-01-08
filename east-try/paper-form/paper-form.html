@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .cen {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .flex1 {
+            flex: 1;
+        }
+
+        .container {
+            width: 80%;
+            padding: 0px;
+            margin: 20px;
+            min-width: 480px;
+            max-width: 600px;
+            min-height: 840px;
+            aspect-ratio: 600/840;
+            border: 2px solid #d0d0d5;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-left: 20px;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin-top: 1.0rem;
+            font-size: 18px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        #years {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #0a0a23;
+            color: white;
+            height: 2rem;
+            border: 2px solid #0a0a23;
+            position: sticky;
+            z-index: 999;
+            top: 0;
+        }
+
+        #years span[class] {
+            font-weight: bold;
+            width: 60px;
+            text-align: right;
+            padding-right: 1rem;
+        }
+
+        .Th {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            height: 0.7rem;
+        }
+
+        .head {
+            font-weight: bold;
+            width: 60px;
+        }
+
+        table {
+            border: 0;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-left: 15px;
+            margin-right: 0.5rem;
+        }
+
+        table caption {
+            color: #356eaf;
+            font-size: 1.3em;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .subcap {
+            text-align: left;
+            font-size: 1rem;
+            padding-left: 5px;
+        }
+
+        .subcap2 {
+            text-align: left;
+            font-size: 1rem;
+            padding-left: 5px;
+            font-style: italic;
+            font-weight: normal;
+        }
+        
+    </style>
+</head>
+<body class="flex cen">
+    <div class="container flex column">
+        <h1>Balance Sheet</h1>
+        <h2>AcmeWidgetCorp</h2>
+        <div id="years">
+            <span class="year">2019</span>
+            <span class="year">2020</span>
+            <span class="year">2021</span>
+        </div>
+        <!-- Assets -->
+        <table>
+            <caption>Assets</caption>
+            <!-- 白行占位 -->
+            <thead>
+                <tr class="Th">
+                    <th><span class="head">2019</span></th>
+                    <th><span class="head">2020</span></th>
+                    <th><span class="head">2021</span></th>
+                </tr>
+            </thead>
+            <!-- 内容 -->
+            <tbody>
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Cash</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$25</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$30</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$28</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">This is the cash we currently have on hand.</th>
+                </tr>
+
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Checking</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$54</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$56</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$53</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">Our primary transactional account.</th>
+                </tr>
+
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Savings</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$500</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$650</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$728</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">Funds set aside for emergencies.</th>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2rem; border-bottom: 4px double #0a0a23; ">
+                    <th class="subcap" style="padding-top: 0.5rem; padding-bottom: 0.25rem">Total</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$579</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$736</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><i><b>$809</b></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Liabilities -->
+        <table>
+            <caption>Liabilities</caption>
+            <!-- 白行占位 -->
+            <thead>
+                <tr class="Th">
+                    <th><span class="head">2019</span></th>
+                    <th><span class="head">2020</span></th>
+                    <th><span class="head">2021</span></th>
+                </tr>
+            </thead>
+            <!-- 内容 -->
+            <tbody>
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Loans</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$500</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$250</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$0</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">The outstanding balance on our startup loan.
+                    </th>
+                </tr>
+
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Expenses</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$200</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$300</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$400</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">Annual anticipated expenses, such as payroll.
+                    </th>
+                </tr>
+
+                <tr style="background-color: #dfdfe2; height: 1.8rem;">
+                    <th class="subcap">Credit</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$50</td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem;">$50</td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem;"><i>$75</i></td>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2.5rem;">
+                    <th class="subcap2">The outstanding balance on our credit card.
+                    </th>
+                </tr>
+
+                <tr style="background-color: #ffffff; height: 2rem; border-bottom: 4px double #0a0a23; ">
+                    <th class="subcap" style="padding-top: 0.5rem; padding-bottom: 0.25rem">Total</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$750</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$600</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><i><b>$475</b></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Net Worth -->
+        <table>
+            <caption>Net Worth</caption>
+            <!-- 白行占位 -->
+            <thead>
+                <tr class="Th">
+                    <th><span class="head">2019</span></th>
+                    <th><span class="head">2020</span></th>
+                    <th><span class="head">2021</span></th>
+                </tr>
+            </thead>
+            <!-- 内容 -->
+            <tbody>
+                <tr style="background-color: #ffffff; height: 2rem; border-bottom: 4px double #0a0a23; ">
+                    <th class="subcap" style="padding-top: 0.5rem; padding-bottom: 0.25rem">Total</th>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$-171</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 1rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><b>$136</b></td>
+                    <td style="text-align: right; width: 60px; padding-right: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.25rem"><i><b>$334</b></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
