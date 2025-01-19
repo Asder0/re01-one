@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <style>
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: serif;
+            color: linen;
+            background-color: rgb(20, 30, 40);
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .cen {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .primeContainer {
+            width: 100%;
+            min-width: 430px;
+            max-width: 960px;
+            border: 2px solid white;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 15px;
+        }
+
+        .bigPic {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: fantasy; 
+            text-align: center;
+            color: orangered;
+            font-size: 8rem;
+            margin: 0;
+        }
+
+        p {
+            display: block;
+            font-family: Times, "Times New Roman", Georgia, serif;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            margin: 0;
+            letter-spacing: 0.6px;
+            text-align: justify;
+        }
+
+        .subtitle {
+            font-size: 2.4rem;
+            text-align: center;
+            color: orangered;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .author {
+            font-size: 2rem;
+            text-align: left;
+            margin-left: 0px;
+            margin-top: 15px;;
+            margin-bottom: 0;
+        }
+
+        .authorName {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .publishDate {
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .headerInfo {
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .icons {
+            font-size: 3rem;
+            display: flex;
+            justify-content: space-between;
+            width: 430px;
+            margin-top: 20px;
+            padding-right: 50px;
+        }
+        
+        .art-font::first-letter {
+            font-size: 6rem;
+            color: orangered;
+            float: left;
+            margin-right: 1rem;
+
+        }
+
+        .text {
+            column-width: 25rem;
+            grid-column: 2 / 3;
+            font-size: 1.8rem;
+            letter-spacing: 0.6px;
+            text-align: justify;
+        }
+
+
+    </style>
+</head>
+<body class="flex cen">
+    <!-- 大盒子 -->
+    <div class="flex column primeContainer flex1">
+        <!-- Heading -->
+        <div class="flex column">
+            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png" alt="freecodecamp logo" class="bigPic">
+            <h1>
+                OUR NEW CURRICULUM
+            </h1>
+            <p class="subtitle">
+                Our efforts to restructure our curriculum with a more project-based
+                focus
+            </p>
+            <div class="flex headerInfo">
+                <!-- Author -->
+                <div class="author flex column">
+                    <p class="authorName">By Asder</p>
+                    <p class="publishDate">January 8, 2025</p>
+                </div>
+                <!-- icons -->
+                <div class="icons">
+                    <a href="https://www.facebook.com/freecodecamp/" style="color: white">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://twitter.com/freecodecamp/" style="color: white">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="https://instagram.com/freecodecamp" style="color: white">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/school/free-code-camp/" style="color: white">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="https://www.youtube.com/freecodecamp" style="color: white">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Page 1 -->
+        <div class="flex">
+            <!-- left column -->
+            <div class="flex1">
+                <!-- left content -->
+                <div class="flex column text">
+                    <!-- column text -->
+                    <div class="flex column">
+                        <!-- text -->
+                        <p class="art-font">
+                            Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
+                        </p>
+                        <p>
+                            After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!
+                        </p>
+                        <p>
+                            It wasn't as dramatic as Doc's revelation in Back to the Future. It
+          just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we'll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass. (And you can view hints if that isn't enough.)
+                        </p>
+                    </div>
+                    <!-- column art-font -->
+                    <div class="special-text">
+                    
+                    </div>
+                    <!-- column text -->
+                    <div class="flex column">
+                        <!-- text -->
+                        <p>
+                            No more walls of explanatory text. No more walls of tests. Just one test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there's plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.
+                        </p>
+                        <p>
+                            The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from "reading mode" to "coding mode".
+                        </p>
+                        <p>
+                            Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Page 2 -->
+        <div class="flex flex1">
+
+        </div>
+    </div>
+    
+</body>
+</html>
